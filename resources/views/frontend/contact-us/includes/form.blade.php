@@ -8,11 +8,11 @@
                     <h2 class="mt0 mb0">{{ $_settings['contact_subtitle'] ?? 'Contact Title' }}</h2>
                 </div>
                 <div class="form-block">
-                    <form action="{{ route('contact.store') }}" method="post" name="feedback-form">
+                    <form action="{{ route('contact.store') }}" method="post" name="feedback-form" id="feedback-form">
                         @csrf
                         <div class="fieldsets row">
                             <div class="col-md-6">
-                                {{ Form::text('name', null ,['placeholder'=> 'Enter your name *','required']) }}
+                                {{ Form::text('name', null ,['placeholder'=> 'Enter your name *']) }}
                                 @if($errors->has('name'))
                                     <label class="has-error" for="name">{{ $errors->first('name') }}</label>
                                 @endif
@@ -21,22 +21,24 @@
                                 'field' => 'name'
                             ])
                             <div class="col-md-6">
-                                {{ Form::email('email', null ,['placeholder'=> 'Enter your email *','required']) }}
+                                {{ Form::email('email', null ,['placeholder'=> 'Enter your email *',
+                                 "pattern" => "([a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$)",
+                                'required']) }}
                                 @if($errors->has('email'))
                                     <label class="has-error" for="email">{{ $errors->first('email') }}</label>
                                 @endif
                             </div>
                         </div>
                         <div class="fieldsets row">
-                            <div class="col-md-6">
-                                {{ Form::tel('phone', null ,['placeholder'=> 'Enter your phone *','required']) }}
+                            <div class="col-md-6 fieldsets-custom">
+                                {{ Form::tel('phone', null ,['class' => 'mobileNum','id' => 'mobile','placeholder'=> 'Enter your mobile no. *']) }}
 
                                 @if($errors->has('phone'))
                                     <label class="has-error" for="phone">{{ $errors->first('phone') }}</label>
                                 @endif
                             </div>
                             <div class="col-md-6">
-                                {{ Form::text('subject', null ,['placeholder'=> 'Enter your subject *','required']) }}
+                                {{ Form::text('subject', null ,['placeholder'=> 'Enter your subject *']) }}
 
                                 @if($errors->has('subject'))
                                     <label class="has-error" for="subject">{{ $errors->first('subject') }}</label>
@@ -44,16 +46,26 @@
                             </div>
                         </div>
                         <div class="fieldsets">
-                            {{ Form::textarea('message', null ,['placeholder'=> 'Enter your message *','required']) }}
+                            {{ Form::textarea('message', null ,['placeholder'=> 'Enter your message *']) }}
 
                             @if($errors->has('message'))
                                 <label class="has-error" for="message">{{ $errors->first('message') }}</label>
                             @endif
                         </div>
+<!--                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" checked="checked">
+                            <label class="custom-control-label" for="customCheck">I agree to the <a href="javascript:void(0)">Terms &amp; Conditions</a> of Business Name.</label>
+                        </div>-->
 
-                        <div class="custom-control">
+<!--                        <div class="custom-control">
                             <label><input type="checkbox" id="tac" name="tac" required> I agree to the <a href="javascript:void(0)">Terms &amp; Conditions</a> of {{ $_settings['company'] }}</label>
+                        </div>-->
+
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck" name="customCheck" checked="checked">
+                            <label class="custom-control-label" for="customCheck">I agree to the <a href="javascript:void(0)">Terms &amp; Conditions</a> of {{ $_settings['company'] }}</label>
                         </div>
+
                         @if($errors->has('tac'))
                             <label class="has-error" for="tac">{{ $errors->first('message') }}</label>
                         @endif
