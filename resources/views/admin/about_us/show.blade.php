@@ -48,10 +48,13 @@
                                         <td>{{ $data['row']->slug }}</td>
                                     </tr>
                                     <tr>
-                                        <td>description</td>
+                                        <td>Short Description</td>
+                                        <td>{!! $data['row']->short_description !!}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Description</td>
                                         <td>{!! $data['row']->description !!}</td>
                                     </tr>
-                                  
                                     <tr>
                                         <td>Banner_Image</td>
                                         <td> <img src="{{ ViewHelper::getImagePath($folder, $data['row']->banner) }}" width="300"></td>

@@ -14,7 +14,7 @@
                         <span> {{  $_settings['about_title'] ?? 'Insert About Title' }}</span>
                         <h2>{{  $_settings['about_subtitle'] ?? 'Insert About Subtitle' }}</h2>
                         <p>
-                            {!! $data['about-us']->description !!}
+                            {!! $data['about-us']->short_description !!}
                         </p>
                         <p class="quote"> {!! $_settings['about_quote'] ?? "insert quote" !!} </p>
                         <div class="user- mt30">

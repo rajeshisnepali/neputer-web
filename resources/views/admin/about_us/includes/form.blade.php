@@ -17,6 +17,14 @@
 </div>
 
 <div class="form-group">
+    {!! Form::label('short_description', 'Short Description', ['class' => 'col-sm-3 control-label no-padding-right']); !!}
+    <div class="col-sm-6">
+        {!! Form::textarea('short_description', null, ['placeholder' => 'Enter Short Description', 'class' => 'form-control ckeditor']); !!}
+    </div>
+    @include('admin.include.form_validation_message', ['field' => 'short_description'])
+</div>
+
+<div class="form-group">
     {!! Form::label('description', 'Description', ['class' => 'col-sm-3 control-label no-padding-right']); !!}
     <div class="col-sm-6">
         {!! Form::textarea('description', null, ['placeholder' => 'Enter Description', 'class' => 'form-control ckeditor']); !!}
