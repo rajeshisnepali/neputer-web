@@ -9,7 +9,7 @@ use App\Model\Product;
 class About extends BaseModel
 {
     protected $table = 'about_us';
-    protected $fillable = ['title', 'image','description','status','order'];
+    protected $fillable = ['title', 'image','short_description','description','status','order'];
 
 
 }
