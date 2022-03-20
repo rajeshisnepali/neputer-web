@@ -20,6 +20,7 @@ class OurTeamController extends BaseController
 
     public function index()
     {
+        abort(404);
         $data = [];
         $data['team-member'] = $this->ourTeamService->ourTeam();
         return view('frontend/our-team/index',compact('data'));
