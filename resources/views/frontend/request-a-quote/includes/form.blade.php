@@ -57,6 +57,12 @@
                             <label class="custom-control-label" for="customCheck">I agree to the <a href="javascript:void(0)">Terms &amp; Conditions</a> of Business Name.</label>
                         </div>-->
 
+                        @captcha
+                        <input type="text" id="captcha" name="captcha" autocomplete="off">
+                        @if($errors->has('captcha'))
+                            <label class="has-error" for="captcha">{{ $errors->first('captcha') }}</label>
+                        @endif
+
                         <div class="custom-control custom-checkbox">
                             <label><input type="checkbox" id="tac" name="tac" required> I agree to the <a href="{{ route('page.menu', ['terms-and-conditions']) }}">Terms &amp; Conditions</a> of {{ $_settings['company'] }}</label>
                         </div>
