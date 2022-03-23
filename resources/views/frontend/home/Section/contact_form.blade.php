@@ -42,12 +42,20 @@
             <label class="has-error" for="message">{{ $errors->first('message') }}</label>
         @endif
     </div>
+
+    @captcha
+    <input type="text" id="captcha" name="captcha" autocomplete="off">
+    @if($errors->has('captcha'))
+        <label class="has-error" for="captcha">{{ $errors->first('captcha') }}</label>
+    @endif
+
     <div class="custom-control custom-checkbox">
         <label><input type="checkbox" id="tac" name="tac" required> I agree to the <a href="{{ route('page.menu', ['terms-and-conditions']) }}">Terms &amp; Conditions</a> of {{ $_settings['company'] }}</label>
     </div>
     @if($errors->has('tac'))
         <label class="has-error" for="tac">{{ $errors->first('message') }}</label>
     @endif
+
 
     <div class="fieldsets mt20"> <button type="submit" name="submit" class="lnk btn-main bg-btn">Submit <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></button> </div>
     <p class="trm"><i class="fas fa-lock"></i>We hate spam, and we respect your privacy.</p>

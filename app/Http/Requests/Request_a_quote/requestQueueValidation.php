@@ -30,6 +30,15 @@ class requestQueueValidation extends FormRequest
             'service' => 'required',
             'message' => 'required',
             'tac' => 'accepted',
+            'captcha' => 'required|captcha'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'captcha.required' => 'Captcha is required',
+            'captcha.captcha' => 'Invalid captcha',
         ];
     }
 }
