@@ -20,10 +20,10 @@
                         <div class="user- mt30">
                             <div class="media">
                                 <div class="user-image bdr-radius"><img
-                                            src="{{ asset('Frontend/images/user-thumb/madan-adhikari.jpg') }}" alt="girl"
+                                            src="{{ asset('Frontend/images/user-thumb/dambar.jpg') }}" alt="girl"
                                             class="img-fluid lazy" ></div>
                                 <div class="media-body user-info v-center">
-                                    <h5>Madan Adhikari</h5>
+                                    <h5>Dambar Kumar Khatri</h5>
                                     <p>Founder of <span>{{ $_settings['company'] }}</span></p>
                                 </div>
                             </div>
