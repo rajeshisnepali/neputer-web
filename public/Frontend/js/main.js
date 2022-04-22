@@ -12,7 +12,6 @@
         levelSpacing: 10,
         navTitle: "Neputer Tech",
         levelTitles: !0,
-        levelTitles: !0,
         labelClose: !1,
         levelTitleAsBack: !0,
         levelOpen: "expand",
