@@ -36,13 +36,11 @@ class RequestQuoteController extends BaseController
      */
 
 
-
     public function __construct(requestAQuoteService $requestAQuoteService, ServiceService $serviceService)
     {
        $this->requestQuoteService = $requestAQuoteService;
        $this->serviceService = $serviceService;
     }
-
 
     public function index(Request $request)
     {
@@ -62,7 +60,8 @@ class RequestQuoteController extends BaseController
             ], Response::HTTP_OK);
         }
         $data = [];
-        $data['services'] = $this->serviceService->getServiceForSelect();
+        $data['pre_services'] = $this->serviceService->getServiceForSelect();
+        $data['services'] = $data['pre_services']->toArray() + [999 => 'Others'];
         return view('frontend.request-a-quote.index',compact('data'));
     }
 
@@ -104,7 +103,7 @@ class RequestQuoteController extends BaseController
     public function store(requestQueueValidation $request)
     {
         $this->requestQuoteService->create($request->validated());
-        $request->session()->flash('success','Successfully Enquiry submitted');
+        $request->session()->flash('success','We have received your quote. Our representative will contact you soon.');
         return redirect()->back();
     }
 

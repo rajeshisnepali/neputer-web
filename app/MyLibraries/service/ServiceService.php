@@ -44,7 +44,7 @@ class ServiceService
 
     public function getServiceForSelect()
     {
-        return $this->model->pluck('title','id');
+        return $this->model->where('status', 1)->pluck('title','id');
     }
 
 }

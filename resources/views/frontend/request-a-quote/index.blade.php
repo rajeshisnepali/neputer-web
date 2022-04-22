@@ -22,6 +22,10 @@
         .custom-checkbox{
             padding-left: 0px !important;
         }
+        .swal2-title {
+            font-size: 1.5em !important;
+        }
+
         @media only screen and (max-width: 768px) {
             .intl-tel-input {
                 flex-basis: 100%;

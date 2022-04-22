@@ -7,7 +7,7 @@
 <script src="{{asset('Frontend/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('Frontend/js/popper.min.js')}}"></script>
 <script src="{{asset('Frontend/js/plugin.min.js')}}"></script>
-<script src="{{asset('Frontend/js/preloader.js')}}"></script>
+{{--<script src="{{asset('Frontend/js/preloader.js')}}"></script>--}}
 <!--common script file-->
 <script src="{{asset('Frontend/js/main.js')}}"></script>
 
