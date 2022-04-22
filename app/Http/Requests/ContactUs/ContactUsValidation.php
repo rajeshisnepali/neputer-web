@@ -18,6 +18,15 @@ class ContactUsValidation extends FormRequest
             'message' => 'required',
             'phone' => 'required| max:14 | min:10',
             'tac' => 'accepted',
+            'captcha' => 'required|captcha',
         ];
      }
+
+    public function messages()
+    {
+        return [
+            'captcha.required' => 'Captcha is required',
+            'captcha.captcha' => 'Invalid captcha',
+        ];
+    }
 }

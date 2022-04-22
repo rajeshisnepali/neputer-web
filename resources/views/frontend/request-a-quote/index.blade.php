@@ -75,7 +75,7 @@
                     },
                     'service':{
                         required: true,
-                    },
+                    }
                 },
             });
         });
