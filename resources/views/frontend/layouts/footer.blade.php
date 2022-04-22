@@ -33,8 +33,8 @@
                         <img src="{{ $logo ?? 'n/a' }}" alt="Neputer Logo" width="100">
                     </a>
                     <p>{!! $_settings['footer_section_description'] !!}</p>
-                    <a href="{!! $_settings['footer_button_link'] ?? '#' !!}" class="btn-main bg-btn3 lnk mt20">{!! $_settings['footer_button_text'] !!}
-                        <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+{{--                    <a href="{!! $_settings['footer_button_link'] ?? '#' !!}" class="btn-main bg-btn3 lnk mt20">{!! $_settings['footer_button_text'] !!}--}}
+{{--                        <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>--}}
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <h5>Contact Us</h5>
@@ -81,7 +81,7 @@
                         <ul class="footer-address-list link-hover">
                             @forelse($_menus['footer-2']['pages'] as $page)
                                 @if($page->page_type == 'link')
-                                   
+
                                     <li><a href="/{{$page->link}}" @if($page->open_in =='new') target="_blank"@endif>{{$page->title}}</a></li>
                                 @else
                                     <li><a href="{{route('page.menu',$page->slug)}}" @if($page->open_in =='new') target="_blank"@endif>{{$page->title}}</a></li>

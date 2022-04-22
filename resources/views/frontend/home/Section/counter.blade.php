@@ -43,7 +43,7 @@
                         <img src="@if(isset($_settings['icon4'])) {{ \App\Facades\ViewHelperFacade::getImagePath('site_configuration',$_settings['icon4']) }}@endif" alt="milestones" class="img-fluid lazy" />
                     </div>
                     <div class="statnumb counter-number">
-                        <span class="counter">{{ $_settings['counter_4'] ?? " Insert Counter 4 " }}</span><span>k</span>
+                        <span class="counter">{{ $_settings['counter_4'] ?? " Insert Counter 4 " }}</span><span>+</span>
                         <p>{{ $_settings['counter_title_4'] ?? "Insert Counter Title 4" }}</p>
                     </div>
                 </div>

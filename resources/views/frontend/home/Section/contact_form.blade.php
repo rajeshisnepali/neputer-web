@@ -44,7 +44,7 @@
     </div>
 
     @captcha
-    <input type="text" id="captcha" name="captcha" autocomplete="off">
+    <input type="text" id="captcha" name="captcha" autocomplete="off" placeholder="Please enter the above code">
     @if($errors->has('captcha'))
         <label class="has-error" for="captcha">{{ $errors->first('captcha') }}</label>
     @endif

@@ -103,7 +103,7 @@ class RequestQuoteController extends BaseController
     public function store(requestQueueValidation $request)
     {
         $this->requestQuoteService->create($request->validated());
-        $request->session()->flash('success','Successfully Enquiry submitted');
+        $request->session()->flash('success','We have received your quote. Our representative will contact you soon.');
         return redirect()->back();
     }
 
