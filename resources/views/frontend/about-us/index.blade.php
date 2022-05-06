@@ -17,7 +17,7 @@
  @include('frontend.about-us.section.about')
 <!--End About-->
 <!--Start why-choose-->
-   @include('frontend.about-us.section.why-us')
+{{--   @include('frontend.about-us.section.why-us')--}}
 <!--End why-choose-->
 <!--Start Footer-->
 @endsection
