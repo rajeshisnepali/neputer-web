@@ -91,7 +91,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="common-heading">
-                        <h4 class="mt0 mb0">Apply Now</h4>
+                        <h4 class="mt0 mb0">Request Now</h4>
                     </div>
                     <button type="button" class="closes" data-dismiss="modal">&times;</button></div>
                 <!-- Modal body -->
@@ -148,7 +148,7 @@
                             </div>
                             <div class="fieldset mt20">
 
-                                <button type="submit" class="lnk btn-main bg-btn">Submit Application<span class="circle"></span>
+                                <button type="submit" class="lnk btn-main bg-btn">Request<span class="circle"></span>
                                 </button>
 
                             </div>
