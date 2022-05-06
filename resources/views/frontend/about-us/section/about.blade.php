@@ -41,6 +41,9 @@
                 </div>
             </div>
         </div>
+
+        @include('frontend.home.Section.hire')
+
     </div>
 </section>
 @endif
