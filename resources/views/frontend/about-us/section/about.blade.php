@@ -17,24 +17,24 @@
                     <div class="col-lg-4 col-sm-4">
                         <div class="statistics">
                             <div class="statnumb counter-number">
-                                <span class="counter">450</span>
-                                <p>Happy Clients</p>
+                                <span class="counter">{{ $_settings['counter_3'] ?? " Insert Counter 3 " }}</span><span>+</span>
+                                <p>{{ $_settings['counter_title_3'] ?? "Insert Counter Title 3" }}</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-4">
                         <div class="statistics">
                             <div class="statnumb">
-                                <span class="counter">95</span><span>k</span>
-                                <p>Hours Worked</p>
+                                <span class="counter">{{ $_settings['counter_5'] ?? " Insert Counter 5 " }}</span><span>k</span>
+                                <p>{{ $_settings['counter_title_5'] ?? "Insert Counter Title 5" }}</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-4">
                         <div class="statistics mb0">
                             <div class="statnumb counter-number">
-                                <span class="counter">850</span>
-                                <p>Projects Done</p>
+                                <span class="counter">{{ $_settings['counter_4'] ?? " Insert Counter 4 " }}</span><span>+</span>
+                                <p>{{ $_settings['counter_title_4'] ?? "Insert Counter Title 4" }}</p>
                             </div>
                         </div>
                     </div>
