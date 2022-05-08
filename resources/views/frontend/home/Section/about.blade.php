@@ -24,7 +24,7 @@
                                             class="img-fluid lazy" ></div>
                                 <div class="media-body user-info v-center">
                                     <h5>Dambar Kumar Khatri</h5>
-                                    <p>Founder of <span>{{ $_settings['company'] }}</span></p>
+                                    <p>Founder / CEO of <span>{{ $_settings['company'] }}</span></p>
                                 </div>
                             </div>
                         </div>
