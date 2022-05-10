@@ -50,13 +50,13 @@
 
 @include('frontend.contact-us.includes.form')
 <!--End Enquire Form-->
-<!--Start Location-->
-<section class="contact-location pad-tb bglight">
-    <div class="container">
-      {!! $_settings['neputer_location'] ?? '' !!}
-    </div>
-</section>
-<!--End Location-->
+{{--<!--Start Location-->--}}
+{{--<section class="contact-location pad-tb bglight">--}}
+{{--    <div class="container">--}}
+{{--      {!! $_settings['neputer_location'] ?? '' !!}--}}
+{{--    </div>--}}
+{{--</section>--}}
+{{--<!--End Location-->--}}
 @endsection
 
 @push('js')
