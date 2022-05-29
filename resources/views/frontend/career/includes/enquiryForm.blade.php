@@ -1,14 +1,13 @@
 <!--Start Enquire Form-->
 @if(isset($data['career']))
 
-<section class="contact-page pad-tb" id="form-validation">
+<section class="contact-page pad-tb" id="jobs">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="common-heading ptag">
-                    <span>{!! $_settings['enquiry_heading'] ?? 'Insert Enquiry Heading'  !!}  </span>
-                    <h2>{!! $_settings['enquiry_subheading'] ?? 'Insert Enquiry Subheading'  !!}</h2>
-                    <p class="mb60">{!! $_settings['enquiry_date'] ?? 'Insert Enquiry Date'  !!} {!! $_settings['enquiry_after_date_heading'] ?? 'Insert Heading After Date'  !!}</p>
+                    <span>{!! $_settings['enquiry_heading'] ?? 'Jobs'  !!}  </span>
+                    <h2>{!! $_settings['enquiry_subheading'] ?? 'View Openings'  !!}</h2>
                 </div>
             </div>
         </div>
@@ -16,7 +15,7 @@
             <div class="col-lg-8">
                 <div class="career-card-div">
                     <div id="accordion" class="accordion">
-                        @foreach($data['career'] as $key => $career)
+                        @forelse($data['career'] as $key => $career)
                         <div class="card-2">
                             <div class="card-header" id="acc{{$key}}">
                                 <button class="btn btn-link btn-block text-left acc-icon" type="button" data-toggle="collapse" data-target="#collapse-{{$key}}" aria-expanded="true" aria-controls="collapse-{{$key}}">
@@ -27,21 +26,42 @@
                                 <div class="data-reqs">
                                     <h5 class="pt20 pb20">Overview</h5>
                                         {!! $career->overview !!}
+                                    <h5 class="pt20 pb20">Job Type</h5>
+                                        {{ $career->jobType }}
+                                    <h5 class="pt20 pb20">Job Level</h5>
+                                        {{ $career->jobLevel }}
+                                    <h5 class="pt20 pb20">Company</h5>
+                                        {{ $career->company }}
+                                    <h5 class="pt20 pb20">Location</h5>
+                                        {{ $career->location }}
                                     <h5 class="pt20 pb20">Required experience</h5>
+                                    <ul class="list-ul ul-check">
                                         {!! $career->requirement_experience !!}
-                                    <h4 class="pb20 pt20">Skills Required:</h4>
+                                    </ul>
+                                    <h4 class="pb20 pt20">Skills Required</h4>
                                     <ul class="list-ul ul-check">
                                         {!! $career->skills !!}
                                     </ul>
-                                    @if($career->deadline_to_apply >= \Carbon\Carbon::today()->toDateString())
+                                    <h4 class="pb20 pt20">Offered Salary</h4>
+                                        {{ $career->salary }}
+                                    <h4 class="pb20 pt20">Deadline to apply</h4>
+                                        {{ date('jS M, Y', strtotime($career->deadline_to_apply)) }}
+                                    {{--@if($career->deadline_to_apply >= \Carbon\Carbon::today()->toDateString())
+                                        <br>
+                                        <a href="#" class="btn-main bg-btn3 lnk mt20" data-toggle="modal" data-target="#modalform{{$key}}">Apply Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+                                    @endif--}}
+                                    <br><br>
+                                    <strong><i>In order to apply, please email your latest and updated CV along with a cover letter at: hr@neputer.com</i></strong>
 
-                                    <a href="#" class="btn-main bg-btn3 lnk mt20" data-toggle="modal" data-target="#modalform{{$key}}">Apply Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
-                                    @endif
                                 </div>
                             </div>
                         </div>
                             <br>
-                            @endforeach
+                        @empty
+                            <div class="card-2">
+                                <strong><i>No current openings.<br> Please email your latest and updated CV along with a cover letter at: hr@neputer.com</i></strong>
+                            </div>
+                        @endforelse
 
                     </div>
                 </div>
