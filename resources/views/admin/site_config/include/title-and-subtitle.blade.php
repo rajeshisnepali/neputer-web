@@ -333,14 +333,14 @@
     </div>
 </div>
 <div class="form-group">
-    {!! Form::label('enquiry_heading' , 'Enquiry Heading' , ['class'=> 'col-sm-3 control-label no-padding-right']) !!}
+    {!! Form::label('enquiry_heading' , 'Career Enquiry Heading' , ['class'=> 'col-sm-3 control-label no-padding-right']) !!}
 
     <div class="col-sm-6">
         {!! Form::text('enquiry_heading' , $data['settings']['enquiry_heading'] ?? null , ['class' => 'col-xs-7 col-sm-5','autocomplete' => 'off' ]) !!}
     </div>
 </div>
 <div class="form-group">
-    {!! Form::label('enquiry_subheading' , 'Enquiry Subheading' , ['class'=> 'col-sm-3 control-label no-padding-right']) !!}
+    {!! Form::label('enquiry_subheading' , 'Career Enquiry Subheading' , ['class'=> 'col-sm-3 control-label no-padding-right']) !!}
 
     <div class="col-sm-6">
         {!! Form::text('enquiry_subheading' , $data['settings']['enquiry_subheading'] ?? null , ['class' => 'col-xs-7 col-sm-5','autocomplete' => 'off' ]) !!}

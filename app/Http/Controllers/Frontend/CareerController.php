@@ -26,9 +26,8 @@ class CareerController
 
     public function index()
     {
-        abort(404);
         $data = [];
-        $data['client'] = $this->clientService->getClients(AppHelperFacade::getSiteConfigByKey('client_limit_careerPage'));
+//        $data['client'] = $this->clientService->getClients(AppHelperFacade::getSiteConfigByKey('client_limit_careerPage'));
         $data['career'] = $this->careerService->getCareerFrontend(AppHelperFacade::getSiteConfigByKey('career_limit'));
         return view('frontend.career.index', compact('data'));
     }

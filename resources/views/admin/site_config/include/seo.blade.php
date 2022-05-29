@@ -9,3 +9,5 @@
 @includeIf('admin.site_config.include.seo_common_file', ['seo_key' => 'teams_page', 'seo_title' => 'Teams Page'])
 
 @includeIf('admin.site_config.include.seo_common_file', ['seo_key' => 'request_quote_page', 'seo_title' => 'Request a Quote Page'])
+
+@includeIf('admin.site_config.include.seo_common_file', ['seo_key' => 'career_page', 'seo_title' => 'Career Page'])
