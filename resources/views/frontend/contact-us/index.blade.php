@@ -41,7 +41,7 @@
 
 <!--Breadcrumb Area-->
 @include('frontend.layouts.breadcrumb',[
-    'page'=>"Contact",
+    //'page'=>"Contact",
     'title'=>"Contact",
     'banner'=> $_settings['contact_banner_image']
 ])
