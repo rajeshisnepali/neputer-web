@@ -69,7 +69,7 @@ class careerService
         $data = [];
         $data['row'] = $this->find($id);
 
-        if($data['row'] == null || $data['row']->status == 0) {
+        if($data['row'] == null) {
             session()->flash('error-message', "Career unable to ".$method);
             return false;
         }
