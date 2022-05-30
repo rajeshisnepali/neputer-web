@@ -12,10 +12,11 @@
 
     <!--Breadcrumb Area-->
     @include('frontend.layouts.breadcrumb',[
-        'page'=>"Career",
+        //'page'=>"Career",
         'title'=>"Career",
         'banner'=> $_settings['career_image']
     ])
+    
 {{--    @include('frontend.layouts.sweetalert')--}}
     <!--End Breadcrumb Area-->
 

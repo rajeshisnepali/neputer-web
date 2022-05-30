@@ -71,7 +71,7 @@
 <div class="form-group required">
     {!! Form::label('overview', 'Overview', ['class'=> 'col-sm-3 control-label no-padding-right ']) !!}
     <div class="col-sm-7">
-        {!! Form::textarea('overview', null , ['placeholder' => 'Overview' , 'class'=>'form-control ckeditor' , 'required']) !!}
+        {!! Form::textarea('overview', null , ['placeholder' => 'Overview' , 'class'=>'form-control custom-ckeditor' , 'required']) !!}
     </div>
     @if($errors->has('overview'))
         <label for="overview" class="has-error">{{ $errors->first('overview') }}</label>
@@ -81,7 +81,7 @@
 <div class="form-group required">
     {!! Form::label('requirement_experience', 'Required experience', ['class' => 'col-sm-3 control-label no-padding-right']); !!}
     <div class="col-sm-7">
-        {!! Form::textarea('requirement_experience', null, ['placeholder' => 'Enter Required experience', 'class' => 'form-control ckeditor','required']); !!}
+        {!! Form::textarea('requirement_experience', null, ['placeholder' => 'Enter Required experience', 'class' => 'form-control custom-ckeditor','required']); !!}
     </div>
     @if($errors->has('requirement_experience'))
         <label class="has-error" for="requirement_experience">{{ $errors->first('requirement_experience') }}</label>
@@ -91,7 +91,7 @@
 <div class="form-group required">
     {!! Form::label('skills', 'Skills', ['class' => 'col-sm-3 control-label no-padding-right']); !!}
     <div class="col-sm-7">
-        {!! Form::textarea('skills', null, ['placeholder' => 'Enter Skills', 'class' => 'form-control ckeditor','required']); !!}
+        {!! Form::textarea('skills', null, ['placeholder' => 'Enter Skills', 'class' => 'form-control custom-ckeditor','required']); !!}
     </div>
     @if($errors->has('skills'))
         <label class="has-error" for="skills">{{ $errors->first('skills') }}</label>

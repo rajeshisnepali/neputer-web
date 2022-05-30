@@ -22,7 +22,7 @@
                                   {{ $career->title }}
                                 </button>
                             </div>
-                            <div id="collapse-{{$key}}" class="card-body collapse show p0" aria-labelledby="acc{{$key}}" data-parent="#accordion">
+                            <div id="collapse-{{$key}}" class="card-body collapse @if($key == 0) show @endif p0" aria-labelledby="acc{{$key}}" data-parent="#accordion">
                                 <div class="data-reqs">
                                     <h5 class="pt20 pb20">Overview</h5>
                                         {!! $career->overview !!}
@@ -52,7 +52,7 @@
                                     @endif--}}
                                     <br><br>
                                     <strong><i>In order to apply, please email your latest and updated CV along with a cover letter at: hr@neputer.com</i></strong>
-
+                                    <br><br><br>
                                 </div>
                             </div>
                         </div>
