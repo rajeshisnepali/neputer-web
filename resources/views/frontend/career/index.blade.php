@@ -5,7 +5,7 @@
 @section('description', $_settings['career_page_seo_description'] ?? 'Career')
 
 @push('css')
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 @endpush
 
 @section('content')
