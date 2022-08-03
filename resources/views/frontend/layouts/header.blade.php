@@ -12,6 +12,18 @@
     <link href="{{asset('Frontend/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('Frontend/css/responsive.css')}}" rel="stylesheet">
 
+    @if (app()->environment('production'))
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178475772-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-178475772-1');
+    </script>
+    @endif
+
     <style>
         .dsk-logo .nav-brand img {
             max-height: 55px;
